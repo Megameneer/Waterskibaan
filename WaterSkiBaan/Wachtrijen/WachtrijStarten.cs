@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using WaterSkiBaan.Events;
 using WaterSkiBaan.Sporters;
 
 namespace WaterSkiBaan.Wachtrijen
@@ -10,6 +11,11 @@ namespace WaterSkiBaan.Wachtrijen
         public void VoegSporterToeAanRij(Sporter sporter)
         {
             Wachtrij.Enqueue(sporter);
+        }
+
+        public void VoegSporterToeAanRij(object sender, SporterEventArgs args)
+        {
+            this.VoegSporterToeAanRij(args.Sporter);
         }
 
         public WachtrijStarten()

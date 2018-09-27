@@ -55,10 +55,12 @@ namespace WaterSkiBaanTest
         public void LijnenInGebruik_StelLijnenBuitenGebruik_LineIsAddedToLinesOutOfUse()
         {
             LijnenInGebruik lijnenInGebruik = new LijnenInGebruik();
+            LijnenVoorraad lijnenVoorraad = new LijnenVoorraad();
+            lijnenInGebruik.LijnenVoorraad = lijnenVoorraad;
             Lijn lijn = new Lijn(3);
             lijnenInGebruik.NeemLijnInGebruik(lijn);
             lijnenInGebruik.StelLijnBuitenGebruik(lijn);
-            Assert.AreEqual(lijn, lijnenInGebruik.LijnenUitgerangeerd.Dequeue());
+            Assert.AreEqual(lijn, lijnenInGebruik.LijnenVoorraad.Lijnen.Dequeue());
         }
     }
 }

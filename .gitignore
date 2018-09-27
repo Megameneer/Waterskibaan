@@ -1,2 +1,7 @@
 bin/
 obj/
+.idea/
+.vs/
+.vscode/
+*.docx
+*.docx#

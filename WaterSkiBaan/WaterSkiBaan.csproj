@@ -42,12 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\LijnEventArgs.cs" />
     <Compile Include="Events\SporterEventArgs.cs" />
     <Compile Include="Events\SportersEventArgs.cs" />
     <Compile Include="Events\WaterSkiBaanEvents.cs" />
     <Compile Include="Kabelbaan\Lijnen.cs" />
     <Compile Include="Kabelbaan\LijnenInGebruik.cs" />
-    <Compile Include="Kabelbaan\LijnenUitgerangeerd.cs" />
+    <Compile Include="Kabelbaan\LijnenVoorraad.cs" />
     <Compile Include="Kabelbaan\Obstakel.cs" />
     <Compile Include="Kabelbaan\ObstakelsInHetWater.cs" />
     <Compile Include="Medewerkers\Instructeur.cs" />
